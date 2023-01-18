@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<HTML>
+    <head>
+        <title> Tablas HTML</title>
+    </head>
+    <body>
+        <h1> TABLAS </h1>
+        <table border="1" summary="Películas favoritas"> <!-- lo del summary solo es para poner información al navegador, no se verá-->
+            <caption> Mis películas favoritas </caption> <!-- esto si se ve encima de la tabla, aunque no dentro-->
+            <thead>
+                <tr>
+                    <th> Título</th>
+                    <th> Género</th>
+                    <th> Año </th>
+                </tr> 
+            </thead>
+            <tbody>
+                <tr>
+                    <td> El señor de los anillos</td>
+                    <td> Aventura</td>
+                    <td> 2004</td>
+                </tr>
+                <tr>
+                    <td> Joker</td>
+                    <td rowspan="2"> Drama</td> <!-- si ponemos rowspan con el número que deseemos, hacemos que una misma celda ocupe dos filas -->
+                    <td> 2019</td>
+                    <td> Anónimo</td>
+                    <!-- Para que sea una tabla con sus mismas filas y columnas, debemos tener los mismos <td> en cada <tr>-->
+                </tr>
+                <tr>
+                    <td> Batman vs Superman</td>
+                
+                <tr>
+                    <td colspan="4"> El señor de los anillos</td>
+                    <!-- si dentro de <td> ponemos colspan, hacemos que esa celda ocupe todas las columnas que queramos, poniendo el número-->
+                </tr>
+            </tbody>
+            <tfoot>
+                <td colspan="4 "> Curso de HTML</td>
+            </tfoot>
+            
+        </table>
+        <h1> Bloque y línea</h1>
+        <!-- Hay elementos en línea y bloque. Aquellos que son en bloque, ocupan el 100% de la línea. Y aquellos elementos en línea, no ocupan el 100%
+        por lo que van en línea y uno detrás de otro-->
+        <a> Hola</a> <a> Hola 2</a>
+        <div> Hola</div> <div> hola2 </div>
+    </body>
+</HTML>

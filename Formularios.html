@@ -1,0 +1,193 @@
+<!-- Nos permite introducir información en diversos campos y enviar la información que hemos rellenado a unh servidor. El buscador de google por ejemplo
+es un campo de un formulario, pues tu introduces una información que deseas buscar y lo envías para que te den respuesta. al igual que el formulario 
+de facebook al registrarse, o cuando tu quieres entrar con tu cuenta a alguna página -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- etiqueta de compatibilidad con internet explorer, con edge...-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- nos permite que lo que vayamos a aplicar con CSS se adapte corrrectamente
+    al navegador que estemos trabajando, o en el que se esté visualizando la página-->
+    <title>Document</title>
+</head>
+<body>
+    <h1> Formularios</h1>
+    <form>
+        <label for="nombre"> Nombre:</label> <!-- etiqueta que describe que información tengo que meter yo como usuario dentro de este input-->
+        <input type="text" id="nombre" placeholder="Nombre y apellidos"/>
+
+        <button type="submit"> Enviar</button>
+        <input type="submit" value="Enviar formulario"/>
+<!--hay dos formas. Poniendo button permite crear un botón genérico que no hace nada y que estarña de forma estético. Si se pone fuera del form, también
+aparecerá pero no hará nada. Si se pone dentro de un formulario actuará como submit, como enviador de formulario. La otra opción es el input, que es 
+el típico botón para enviar. La diferencia entre ambos, es que el input de tipo submit solo está limitado al botón de enviar y la etiqueta de button
+sirve para mas cosas -->
+    </form>
+    <br/>
+    <br/>
+    <form> 
+        <fieldset> 
+            <legend> Información personal</legend>
+
+            <div> 
+                 <label for="nombre"> Nombre:</label>
+                <input type="text" name="nombre" id="nombre" placeholder=" Nombre y apellidos"/>
+            </div>
+
+            <div>
+       
+                   <label for="descripcion"> Descripción:</label>
+                  <textarea id=" descripcion"></textarea>
+            </div>
+
+            <div>
+                Email 
+                <input type="email"/>
+            </div>
+
+            <div>
+                Contraseña
+                <input type="password"/>
+            </div>
+
+            <div>
+                Radio
+                <input type="radio" name="genero" id="hombre" value="hombre"/>
+                <label for="hombre">Hombre </label>
+
+                <input type="radio" name="genero" id="mujer" value="mujer"/>
+               <label for="mujer">Mujer</label>
+            </div>
+
+            <div>
+                Select:
+                <Select>
+                    <option value="hombre">Hombre</option>
+                    <option value="mujer"> Mujer</option>
+                    <option value="otro"> Otro</option>
+
+                </Select>
+            </div>
+
+            <div>
+                Ceckbox:
+                <label>
+                    <input type="checkbox"/> Mayor de edad
+                </label>
+                <label>
+                    <input type="checkbox"/> Menor de edad
+                </label>
+
+            </div>
+            <div>
+                Color:
+                <input type="color"/>
+            </div>
+
+            <div>
+                Fecha:
+                <input type="date"/>
+            </div>
+
+            <div>
+                Ficheros:
+                <input type="file"/>
+            </div>
+            <div>
+                Imagen:
+                <input type="image" src="imágenes/índice.jpg" width="50"/>
+            </div>
+
+           
+        
+                <input type="hidden" name="oculto" value="supermegan"/>
+            <div>
+                Número 
+                <input type="number"/>
+            </div>
+            <div>
+                Rango: 
+                <input type="range" name="rango"/>
+            </div>
+
+            <div>
+                Buscar: 
+                <input type="search" name="buscar"/>
+                <button> Buscar</button>
+            </div>
+
+            <div>
+                Teléfono
+                <input type="tel" name="telefono"/>
+            </div>
+            <div>
+                Hora: 
+                <input type="time"/>
+            </div>
+
+            <div>
+                Sitio Web:
+                <input type="url"/>
+            </div>
+            <div>
+                Mes: 
+                <input type="month"/>
+                
+            </div>
+            <div>
+                Mes del año:
+                <Select>
+                    <option value="enero">Enero</option>
+                    <option value="febrero"> Febrero</option>
+                    <option value="marzo"> Marzo</option>
+                </select>
+            </div>
+
+            <div>
+                Barra de progreso:
+                <progress max="100" value="45"> </progress>
+            </div>
+            <div>
+                Barra de progreso
+                <meter max="100" value="25"></meter>
+            </div>
+
+            <div>
+                Lista de datos:
+                <input list="frutas" name="fruta"/>
+                <datalist id="frutas">
+                    <option value="manzana"/>
+                    <option value="sandia"/>
+                    <option value="pera"/>
+                    <option value="naranja"/>
+                    <option value="cereza"/>
+                </datalist>
+            </div>
+
+        <!-- El del mes no se suele utilizar mucho, puesto que normalmente se pobe fecha-->
+        </fieldset>
+
+
+
+
+
+        <!-- con la etiqueta fieldset, los cuadros quedan muy grandes. por lo que también se podría utilizar la etiqueta de párrafo, para bajar cada 
+        campo, y no tener esos cuadros tan grandes en la página--> 
+        <!-- En vez de utilizar la etiqueta de párrafo, vamos a utilizar el div, que queda más organizado aun-->
+        <input type="submit" value="Enviar" />
+        <input type="reset" value="Limpiar formulario"/> 
+    </form>
+    <h1> Validación </h1>
+    <form>
+        <input type="text" required
+        minlength="5"
+        maxlength="20"
+        pattern="[A-Za-z]+"/>
+        
+
+        <input type="number" required max="20" min="5"/>
+
+        <input type="submit" value="Enviar"/>
+    </form>
+</body>
+</html>
